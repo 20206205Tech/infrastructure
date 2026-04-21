@@ -10,6 +10,8 @@ on:
     branches: [main]
     paths:
       - "modules/oracle/**"
+  repository_dispatch:
+    types: [oracle_trigger]
 
 jobs:
   oracle:
