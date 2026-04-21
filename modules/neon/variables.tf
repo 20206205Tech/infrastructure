@@ -20,11 +20,14 @@ variable "projects" {
     "dev-database-api-gateway-http-log",
     "prod-database-api-gateway-http-log",
 
-    "dev-database-be-ai",
-    "prod-database-be-ai",
 
-    "dev-database-code-be-ai",
-    "prod-database-code-be-ai",
+
+
+    # "dev-database-be-ai",
+    # "prod-database-be-ai",
+
+    # "dev-database-code-be-ai",
+    # "prod-database-code-be-ai",
 
     "dev-database-crawl-data-luatvietnam",
     "prod-database-crawl-data-luatvietnam",
