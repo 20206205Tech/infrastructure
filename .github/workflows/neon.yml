@@ -1,24 +1,24 @@
-name: upstash
+name: neon
 
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - "modules/upstash/**"
+      - "modules/neon/**"
   pull_request:
     branches: [main]
     paths:
-      - "modules/upstash/**"
+      - "modules/neon/**"
 
 jobs:
-  upstash:
-    name: upstash
+  neon:
+    name: neon
     runs-on: ubuntu-latest
 
     defaults:
       run:
-        working-directory: ./modules/upstash
+        working-directory: ./modules/neon
 
     env:
       TF_PLUGIN_CACHE_DIR: ${{ github.workspace }}/.terraform.d/plugin-cache
@@ -34,7 +34,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.TF_PLUGIN_CACHE_DIR }}
-          key: ${{ runner.os }}-terraform-${{ hashFiles('modules/upstash/.terraform.lock.hcl') }}
+          key: ${{ runner.os }}-terraform-${{ hashFiles('modules/neon/.terraform.lock.hcl') }}
           restore-keys: |
             ${{ runner.os }}-terraform-
 
