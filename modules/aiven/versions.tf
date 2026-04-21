@@ -15,5 +15,5 @@ terraform {
 }
 
 provider "aiven" {
-  api_token = var.aiven_token
+  api_token = var.AIVEN_TOKEN
 }

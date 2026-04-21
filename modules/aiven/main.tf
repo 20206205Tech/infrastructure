@@ -1,6 +1,6 @@
 resource "aiven_project" "this" {
   project   = "project-by-terraform"
-  parent_id = var.aiven_parent_id
+  parent_id = var.AIVEN_PARENT_ID
 }
 
 resource "aiven_kafka" "kafka_srv" {
