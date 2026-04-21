@@ -13,7 +13,7 @@ on:
 
 jobs:
   langsmith:
-    name: Terraform Workflow
+    name: langsmith
     runs-on: ubuntu-latest
 
     defaults:
