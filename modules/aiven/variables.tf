@@ -1,7 +1,7 @@
 variable "AIVEN_PARENT_ID" {
   type        = string
   description = "ID của thư mục cha trên Aiven"
-  sensitive   = true
+  default     = "a590113c7a45"
 }
 
 variable "AIVEN_TOKEN" {
