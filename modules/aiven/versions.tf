@@ -15,6 +15,5 @@ terraform {
 }
 
 provider "aiven" {
-  # Không cần truyền api_token ở đây.
-  # Provider sẽ tự động đọc từ biến môi trường AIVEN_TOKEN trên Terraform Cloud.
+  api_token = var.aiven_token
 }
