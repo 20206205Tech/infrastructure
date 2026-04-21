@@ -1,0 +1,65 @@
+name: oracle
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "modules/oracle/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - "modules/oracle/**"
+
+jobs:
+  oracle:
+    name: oracle
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./modules/oracle
+
+    env:
+      TF_PLUGIN_CACHE_DIR: ${{ github.workspace }}/.terraform.d/plugin-cache
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create Terraform Plugin Cache Dir
+        run: mkdir -p ${{ env.TF_PLUGIN_CACHE_DIR }}
+
+      - name: Cache Terraform Providers
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.TF_PLUGIN_CACHE_DIR }}
+          key: ${{ runner.os }}-terraform-${{ hashFiles('modules/oracle/.terraform.lock.hcl') }}
+          restore-keys: |
+            ${{ runner.os }}-terraform-
+
+      # Bước này CHỈ ĐỂ LẤY TF_API_TOKEN từ Doppler cấp cho GitHub Actions
+      - name: Fetch secrets from Doppler
+        id: doppler
+        uses: dopplerhq/secrets-fetch-action@v1.2.0
+        with:
+          doppler-token: ${{ secrets.DOPPLER_TOKEN }}
+          doppler-project: ${{ secrets.DOPPLER_PROJECT }}
+          doppler-config: ${{ secrets.DOPPLER_CONFIG }}
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.7.0" # Hoặc version bạn đang dùng
+          # Đẩy token này vào để GitHub Actions có quyền gọi Terraform Cloud
+          cli_config_credentials_token: ${{ steps.doppler.outputs.TF_API_TOKEN }}
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Plan
+        run: terraform plan -input=false
+
+      - name: Terraform Apply
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: terraform apply -auto-approve -input=false
