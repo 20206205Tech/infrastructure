@@ -10,8 +10,6 @@ on:
     branches: [main]
     paths:
       - "modules/oracle/**"
-  repository_dispatch:
-    types: [oracle_trigger]
 
 jobs:
   oracle:
@@ -40,20 +38,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-terraform-
 
-      # Bước này CHỈ ĐỂ LẤY TF_API_TOKEN từ Doppler cấp cho GitHub Actions
       - name: Fetch secrets from Doppler
         id: doppler
         uses: dopplerhq/secrets-fetch-action@v1.2.0
         with:
           doppler-token: ${{ secrets.DOPPLER_TOKEN }}
-          doppler-project: ${{ secrets.DOPPLER_PROJECT }}
-          doppler-config: ${{ secrets.DOPPLER_CONFIG }}
+          doppler-project: 20206205tech
+          doppler-config: infra
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
-          terraform_version: "1.7.0" # Hoặc version bạn đang dùng
-          # Đẩy token này vào để GitHub Actions có quyền gọi Terraform Cloud
+          terraform_version: "1.7.0"
           cli_config_credentials_token: ${{ steps.doppler.outputs.TF_API_TOKEN }}
 
       - name: Terraform Init
