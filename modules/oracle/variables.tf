@@ -17,7 +17,8 @@ variable "OCI_REGION" {
 }
 
 
-# --- CÁC THÔNG TIN NHẠY CẢM (ĐỒNG BỘ TỪ DOPPLER) ---
+
+
 
 variable "OCI_USER_OCID" {
   type        = string
