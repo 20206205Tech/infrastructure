@@ -29,8 +29,8 @@ variable "projects" {
     # "dev-database-code-be-ai",
     # "prod-database-code-be-ai",
 
-    "dev-database-crawl-data-luatvietnam",
-    "prod-database-crawl-data-luatvietnam",
+    # "dev-database-crawl-data-luatvietnam",
+    # "prod-database-crawl-data-luatvietnam",
 
     "dev-database-data-pipeline-vbpl",
     "prod-database-data-pipeline-vbpl",
