@@ -11,6 +11,3 @@ Doppler đã được cấu hình đồng đồng bộ sang terraform nên khôn
 tuy nhiên trong Doppler đang không có dữ liệu mới của heroku
 
 Nếu thông tin không quan trọng tôi muốn điền luôn trong default
-
-
-
