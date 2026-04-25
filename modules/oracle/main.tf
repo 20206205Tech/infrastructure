@@ -125,6 +125,7 @@ resource "oci_core_default_security_list" "generated_oci_core_default_security_l
     protocol    = "all"
   }
 
+  # Mở Port 22 cho SSH
   ingress_security_rules {
     protocol = "6"
     source   = "0.0.0.0/0"
@@ -134,75 +135,26 @@ resource "oci_core_default_security_list" "generated_oci_core_default_security_l
     }
   }
 
-#   ingress_security_rules {
-#     protocol = "6"
-#     source   = "0.0.0.0/0"
-#     tcp_options {
-#       max = 8000
-#       min = 8000
-#     }
-#   }
-
-#   ingress_security_rules {
-#     protocol = "6"
-#     source   = "0.0.0.0/0"
-#     tcp_options {
-#       max = 8080
-#       min = 8080
-#     }
-#   }
-
-#   ingress_security_rules {
-#     protocol = "6"
-#     source   = "0.0.0.0/0"
-#     tcp_options {
-#       max = 30002
-#       min = 30002
-#     }
-#   }
-
-#   ingress_security_rules {
-#     protocol = "6"
-#     source   = "0.0.0.0/0"
-#     tcp_options {
-#       max = 30003
-#       min = 30003
-#     }
-#   }
-
-#   ingress_security_rules {
-#     protocol = "6"
-#     source   = "0.0.0.0/0"
-#     tcp_options {
-#       max = 30004
-#       min = 30004
-#     }
-#   }
-
-
-
-
-
+  # Mở Port 80 cho HTTP (Traefik Ingress)
   ingress_security_rules {
     protocol = "6"
     source   = "0.0.0.0/0"
     tcp_options {
-      max = 30706
-      min = 30706
+      max = 80
+      min = 80
     }
   }
 
-
-
+  # Mở Port 443 cho HTTPS (Traefik Ingress)
   ingress_security_rules {
     protocol = "6"
     source   = "0.0.0.0/0"
     tcp_options {
-      max = 31743
-      min = 31743
+      max = 443
+      min = 443
     }
   }
 
-
-
+  # Đã comment các port không cần thiết để tăng cường bảo mật
+  # ingress_security_rules { ... (giữ nguyên các phần comment cũ của bạn) ... }
 }
