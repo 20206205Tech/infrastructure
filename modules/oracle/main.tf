@@ -134,74 +134,74 @@ resource "oci_core_default_security_list" "generated_oci_core_default_security_l
     }
   }
 
-  ingress_security_rules {
-    protocol = "6"
-    source   = "0.0.0.0/0"
-    tcp_options {
-      max = 8000
-      min = 8000
-    }
-  }
+#   ingress_security_rules {
+#     protocol = "6"
+#     source   = "0.0.0.0/0"
+#     tcp_options {
+#       max = 8000
+#       min = 8000
+#     }
+#   }
 
-  ingress_security_rules {
-    protocol = "6"
-    source   = "0.0.0.0/0"
-    tcp_options {
-      max = 8080
-      min = 8080
-    }
-  }
+#   ingress_security_rules {
+#     protocol = "6"
+#     source   = "0.0.0.0/0"
+#     tcp_options {
+#       max = 8080
+#       min = 8080
+#     }
+#   }
 
-  ingress_security_rules {
-    protocol = "6"
-    source   = "0.0.0.0/0"
-    tcp_options {
-      max = 30002
-      min = 30002
-    }
-  }
+#   ingress_security_rules {
+#     protocol = "6"
+#     source   = "0.0.0.0/0"
+#     tcp_options {
+#       max = 30002
+#       min = 30002
+#     }
+#   }
 
-  ingress_security_rules {
-    protocol = "6"
-    source   = "0.0.0.0/0"
-    tcp_options {
-      max = 30003
-      min = 30003
-    }
-  }
+#   ingress_security_rules {
+#     protocol = "6"
+#     source   = "0.0.0.0/0"
+#     tcp_options {
+#       max = 30003
+#       min = 30003
+#     }
+#   }
 
-  ingress_security_rules {
-    protocol = "6"
-    source   = "0.0.0.0/0"
-    tcp_options {
-      max = 30004
-      min = 30004
-    }
-  }
-
-
+#   ingress_security_rules {
+#     protocol = "6"
+#     source   = "0.0.0.0/0"
+#     tcp_options {
+#       max = 30004
+#       min = 30004
+#     }
+#   }
 
 
 
-  ingress_security_rules {
-    protocol = "6"
-    source   = "0.0.0.0/0"
-    tcp_options {
-      max = 32054
-      min = 32054
-    }
-  }
+
+
+#   ingress_security_rules {
+#     protocol = "6"
+#     source   = "0.0.0.0/0"
+#     tcp_options {
+#       max = 32054
+#       min = 32054
+#     }
+#   }
 
 
 
-  ingress_security_rules {
-    protocol = "6"
-    source   = "0.0.0.0/0"
-    tcp_options {
-      max = 30409
-      min = 30409
-    }
-  }
+#   ingress_security_rules {
+#     protocol = "6"
+#     source   = "0.0.0.0/0"
+#     tcp_options {
+#       max = 30409
+#       min = 30409
+#     }
+#   }
 
 
 
