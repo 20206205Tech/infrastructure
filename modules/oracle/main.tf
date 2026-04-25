@@ -147,6 +147,15 @@ resource "oci_core_default_security_list" "generated_oci_core_default_security_l
     protocol = "6"
     source   = "0.0.0.0/0"
     tcp_options {
+      max = 8080
+      min = 8080
+    }
+  }
+
+  ingress_security_rules {
+    protocol = "6"
+    source   = "0.0.0.0/0"
+    tcp_options {
       max = 30002
       min = 30002
     }
