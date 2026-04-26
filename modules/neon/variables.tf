@@ -21,16 +21,7 @@ variable "projects" {
     "prod-database-api-gateway-http-log",
 
 
-
-
-    # "dev-database-be-ai",
-    # "prod-database-be-ai",
-
-    # "dev-database-code-be-ai",
-    # "prod-database-code-be-ai",
-
-    # "dev-database-crawl-data-luatvietnam",
-    # "prod-database-crawl-data-luatvietnam",
+ 
 
     "dev-database-data-pipeline-vbpl",
     "prod-database-data-pipeline-vbpl",
@@ -56,8 +47,8 @@ variable "projects" {
     "dev-database-conversation-service",
     "prod-database-conversation-service",
 
-    "dev-database-payment-service",
-    "prod-database-payment-service"
+    "dev-payment-service",
+    "prod-payment-service",
   ]
 }
 
