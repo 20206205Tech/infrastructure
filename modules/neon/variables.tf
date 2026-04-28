@@ -20,15 +20,6 @@ variable "projects" {
     "dev-database-api-gateway-http-log",
     "prod-database-api-gateway-http-log",
 
-
- 
-
-    "dev-database-data-pipeline-vbpl",
-    "prod-database-data-pipeline-vbpl",
-
-    "dev-database-data-pipeline-phapdien",
-    "prod-database-data-pipeline-phapdien",
-
     "dev-database-persona-service",
     "prod-database-persona-service",
 
@@ -50,8 +41,17 @@ variable "projects" {
     "dev-payment-service",
     "prod-payment-service",
 
+    "dev-database-data-pipeline-vbpl",
+    "prod-database-data-pipeline-vbpl",
+
     "dev-data-pipeline-vbplnew",
     "prod-data-pipeline-vbplnew",
+
+    "dev-data-pipeline-phapdien",
+    "prod-data-pipeline-phapdien",
+
+    "dev-data-pipeline-user-documents",
+    "prod-data-pipeline-user-documents",
 
   ]
 }
