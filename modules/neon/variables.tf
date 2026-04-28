@@ -49,6 +49,10 @@ variable "projects" {
 
     "dev-payment-service",
     "prod-payment-service",
+
+    "dev-data-pipeline-vbplnew",
+    "prod-data-pipeline-vbplnew",
+
   ]
 }
 
