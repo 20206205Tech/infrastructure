@@ -19,7 +19,7 @@ resource "cloudflare_zero_trust_tunnel_cloudflared_config" "colab_config" {
       service  = "http://127.0.0.1:11434"
     }
     ingress_rule {
-      hostname = "webhook.${var.domain_name}"
+      hostname = "webhook-colab.${var.domain_name}"
       service  = "http://127.0.0.1:30434"
     }
     ingress_rule {
