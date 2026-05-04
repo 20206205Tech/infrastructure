@@ -20,26 +20,9 @@ variable "projects" {
     "dev-database-api-gateway-http-log",
     "prod-database-api-gateway-http-log",
 
-    "dev-database-persona-service",
-    "prod-database-persona-service",
+ 
 
-    # "dev-database-subscription-service",
-    # "prod-database-subscription-service",
 
-    "dev-database-document-service",
-    "prod-database-document-service",
-
-    "dev-database-chatbot-service",
-    "prod-database-chatbot-service",
-
-    "dev-database-chat-history",
-    "prod-database-chat-history",
-
-    "dev-database-conversation-service",
-    "prod-database-conversation-service",
-
-    "dev-payment-service",
-    "prod-payment-service",
 
     "dev-database-data-pipeline-vbpl",
     "prod-database-data-pipeline-vbpl",
@@ -52,6 +35,43 @@ variable "projects" {
 
     "dev-data-pipeline-user-documents",
     "prod-data-pipeline-user-documents",
+
+
+
+
+
+
+
+
+    "dev-payment-service",
+    "prod-payment-service",
+
+
+
+
+
+    "dev-conversation-service",
+    "prod-conversation-service",
+
+    
+    "dev-persona-service",
+    "prod-persona-service",
+
+
+
+
+
+
+    "dev-document-service",
+    "prod-document-service",
+
+    "dev-chatbot-service",
+    "prod-chatbot-service",
+
+    "dev-chat-history",
+    "prod-chat-history",
+
+
 
   ]
 }
