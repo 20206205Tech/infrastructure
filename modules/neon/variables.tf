@@ -23,8 +23,8 @@ variable "projects" {
     "dev-database-persona-service",
     "prod-database-persona-service",
 
-    "dev-database-subscription-service",
-    "prod-database-subscription-service",
+    # "dev-database-subscription-service",
+    # "prod-database-subscription-service",
 
     "dev-database-document-service",
     "prod-database-document-service",
