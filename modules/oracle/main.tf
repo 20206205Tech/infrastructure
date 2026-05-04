@@ -155,6 +155,4 @@ resource "oci_core_default_security_list" "generated_oci_core_default_security_l
     }
   }
 
-  # Đã comment các port không cần thiết để tăng cường bảo mật
-  # ingress_security_rules { ... (giữ nguyên các phần comment cũ của bạn) ... }
 }
