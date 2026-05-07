@@ -62,15 +62,15 @@ variable "projects" {
 
 
 
-    "dev-document-service",
-    "prod-document-service",
+    # "dev-document-service",
+    # "prod-document-service",
 
 
 
 
 
-    "dev-vector-database-user-documents",
-    "prod-vector-database-user-documents",
+    # "dev-vector-database-user-documents",
+    # "prod-vector-database-user-documents",
 
   ]
 }
