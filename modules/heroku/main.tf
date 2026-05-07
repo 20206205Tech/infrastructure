@@ -41,3 +41,13 @@ resource "herokux_app_github_integration" "this" {
     herokux_pipeline_github_integration.this
   ]
 }
+
+
+# Ví dụ cấu hình cho code-payment-service chạy Basic
+resource "heroku_formation" "payment_service" {
+  app_id     = heroku_app.this.id
+  type       = "web"
+  quantity   = 1
+  size       = "basic" # Đổi thành "eco" nếu muốn dùng kịch bản 2
+  depends_on = [heroku_app.this]
+}
