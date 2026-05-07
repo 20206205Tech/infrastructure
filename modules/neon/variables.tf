@@ -40,8 +40,8 @@ variable "projects" {
     "dev-code-payment-service",
     "prod-code-payment-service",
 
-    "dev-conversation-service",
-    "prod-conversation-service",
+    "dev-code-conversation-service",
+    "prod-code-conversation-service",
 
     "dev-chatbot-service",
     "prod-chatbot-service",
@@ -50,8 +50,8 @@ variable "projects" {
 
     # "dev-document-service",
     # "prod-document-service",
-    # "dev-vector-database-user-documents",
-    # "prod-vector-database-user-documents",
+    # "dev-user-document-vector-database",
+    # "prod-user-document-vector-database",
 
     # "dev-persona-service",
     # "prod-persona-service",
