@@ -37,8 +37,8 @@ variable "projects" {
     "dev-api-gateway-http-log",
     "prod-api-gateway-http-log",
 
-    "dev-payment-service",
-    "prod-payment-service",
+    "dev-code-payment-service",
+    "prod-code-payment-service",
 
     "dev-conversation-service",
     "prod-conversation-service",
