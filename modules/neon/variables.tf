@@ -48,10 +48,10 @@ variable "projects" {
     "dev-chat-history",
     "prod-chat-history",
 
-    # "dev-document-service",
-    # "prod-document-service",
-    # "dev-user-document-vector-database",
-    # "prod-user-document-vector-database",
+    "dev-code-document-service",
+    "prod-code-document-service",
+    "dev-user-document-vector-database",
+    "prod-user-document-vector-database",
 
     # "dev-persona-service",
     # "prod-persona-service",
