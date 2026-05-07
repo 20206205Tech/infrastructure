@@ -17,14 +17,8 @@ variable "projects" {
     "dev-api-gateway",
     "prod-api-gateway",
 
-
-
     "dev-database-api-gateway-http-log",
     "prod-database-api-gateway-http-log",
-
- 
-
-
 
     "dev-database-data-pipeline-vbpl",
     "prod-database-data-pipeline-vbpl",
@@ -34,12 +28,6 @@ variable "projects" {
 
     "dev-data-pipeline-phapdien",
     "prod-data-pipeline-phapdien",
-
-    "dev-data-pipeline-user-documents",
-    "prod-data-pipeline-user-documents",
-
-
-
 
 
 
@@ -64,9 +52,6 @@ variable "projects" {
 
 
 
-    "dev-document-service",
-    "prod-document-service",
-
     "dev-chatbot-service",
     "prod-chatbot-service",
 
@@ -75,6 +60,18 @@ variable "projects" {
 
 
 
+
+
+    "dev-document-service",
+    "prod-document-service",
+
+
+
+
+
+    "dev-vector-database-user-documents",
+    "prod-vector-database-user-documents",
+
   ]
 }
 
@@ -82,7 +79,7 @@ variable "setting_service_projects" {
   type        = list(string)
   description = "Danh sách các project cho setting service"
   default = [
-    "dev-database-setting-service",
-    "prod-database-setting-service"
+    "dev-setting-service",
+    "prod-setting-service"
   ]
 }
