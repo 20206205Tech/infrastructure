@@ -1,11 +1,14 @@
 # 1. Khai báo danh sách các service local và port tương ứng
 locals {
   localhost_services = {
-    "dev-data-pipeline-service"     = "http://localhost:30000"
-    "dev-code-payment-service"      = "http://localhost:30001"
-    "dev-code-conversation-service" = "http://localhost:30002"
-    "dev-code-chatbot-service"      = "http://localhost:30003"
-    "dev-code-document-service"     = "http://localhost:30004"
+    "dev-data-pipeline-phapdien-service"     = "http://localhost:51001"
+    "dev-data-pipeline-vbplnew-service"     = "http://localhost:51002"
+
+    "dev-code-chatbot-service"      = "http://localhost:52001"
+    "dev-code-document-service"     = "http://localhost:52002"
+
+    "dev-code-payment-service"      = "http://localhost:33001"
+    "dev-code-conversation-service" = "http://localhost:33002"
   }
 }
 

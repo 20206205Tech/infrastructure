@@ -43,10 +43,6 @@ variable "projects" {
     "dev-conversation-service",
     "prod-conversation-service",
 
-    
-    "dev-persona-service",
-    "prod-persona-service",
-
 
 
 
@@ -71,6 +67,15 @@ variable "projects" {
 
     # "dev-vector-database-user-documents",
     # "prod-vector-database-user-documents",
+
+
+
+
+    
+    "dev-persona-service",
+    "prod-persona-service",
+
+
 
   ]
 }
