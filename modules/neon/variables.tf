@@ -53,8 +53,8 @@ variable "projects" {
     "dev-user-document-vector-database",
     "prod-user-document-vector-database",
 
-    # "dev-code-persona-service",
-    # "prod-code-persona-service",
+    "dev-code-persona-service",
+    "prod-code-persona-service",
 
   ]
 }
