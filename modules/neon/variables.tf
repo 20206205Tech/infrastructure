@@ -45,10 +45,8 @@ variable "projects" {
 
     "dev-code-chatbot-service",
     "prod-code-chatbot-service",
-
-
-    # "dev-chat-history",
-    # "prod-chat-history",
+    "dev-chat-history",
+    "prod-chat-history",
 
     # "dev-document-service",
     # "prod-document-service",
