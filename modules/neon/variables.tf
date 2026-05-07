@@ -14,8 +14,10 @@ variable "projects" {
   type        = list(string)
   description = "Danh sách tên các project Neon cần tạo"
   default = [
-    "dev-database-api-gateway",
-    "prod-database-api-gateway",
+    "dev-api-gateway",
+    "prod-api-gateway",
+
+
 
     "dev-database-api-gateway-http-log",
     "prod-database-api-gateway-http-log",
