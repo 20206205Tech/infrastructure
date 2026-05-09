@@ -3,6 +3,6 @@ variable "project_names" {
   description = "Danh sách tên các dự án cần tạo"
   default = [
     "project-chatbot-by-terraform",
-    "project-document-by-terraform"
+    # "project-document-by-terraform"
   ]
 }
