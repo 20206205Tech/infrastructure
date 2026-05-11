@@ -64,11 +64,11 @@ variable "SMTP_PASSWORD" {
 variable "SMTP_ADMIN_EMAIL" {
   type        = string
   description = "Địa chỉ email người gửi (From Email)"
-  default     = "auth@20206205.tech"
+  default     = "support@20206205.tech"
 }
 
 variable "SMTP_SENDER_NAME" {
   type        = string
   description = "Tên hiển thị của người gửi (From Name)"
-  default     = "20206205tech Auth"
+  default     = "(20206205.tech) AI Chatbot - Support"
 }
