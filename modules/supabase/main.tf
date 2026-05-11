@@ -3,15 +3,16 @@ locals {
 
   project_configs = {
     "dev" = {
-      # Khi dev api không có giao diện, vào url sẽ sang trang này
-      site_url     = local.default_callback
-      # Cho phép React redirect về localhost khi cần
-      allowed_uris = ["http://localhost:3000/auth/callback"]
+      # Đặt site_url chính là localhost cho môi trường dev
+      site_url     = "http://localhost:3000/auth/callback"
+      # Đưa url dự phòng vào danh sách cho phép
+      allowed_uris = [local.default_callback]
     }
     "prod" = {
-      site_url     = local.default_callback
-      # Cho phép React redirect về domain chính khi cần
-      allowed_uris = ["https://20206205.tech/auth/callback"]
+      # Đặt site_url chính là domain thực cho môi trường prod
+      site_url     = "https://20206205.tech/auth/callback"
+      # Đưa url dự phòng vào danh sách cho phép
+      allowed_uris = [local.default_callback]
     }
   }
 }
@@ -47,6 +48,7 @@ resource "supabase_settings" "this" {
     external_google_client_id = var.GOOGLE_CLIENT_ID
     external_google_secret    = var.GOOGLE_CLIENT_SECRET
 
+    # Lúc này site_url sẽ tự động ăn theo http://localhost:3000... (dev) hoặc https://20206205.tech... (prod)
     site_url = local.project_configs[each.key].site_url
 
     # Dùng join để biến list thành string cách nhau bởi dấu phẩy
