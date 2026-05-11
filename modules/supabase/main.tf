@@ -34,8 +34,6 @@ data "supabase_apikeys" "this" {
   project_ref = each.value.id
 }
 
-
-
 resource "supabase_settings" "this" {
   for_each = supabase_project.this
 
@@ -63,5 +61,16 @@ resource "supabase_settings" "this" {
     smtp_pass        = var.SMTP_PASSWORD
     smtp_admin_email = var.SMTP_ADMIN_EMAIL
     smtp_sender_name = var.SMTP_SENDER_NAME
+
+    # --- CẤU HÌNH ĐỊNH DẠNG EMAIL ---
+    # Tiêu đề email (Subject)
+    mailer_templates_confirmation_subject = "Confirm your signup"
+    
+    # Nội dung email (HTML) dùng Heredoc để hỗ trợ nhiều dòng
+    mailer_templates_confirmation_content = <<-EOT
+      <h2>Confirm your signup</h2>
+      <p>Follow this link to confirm your user:</p>
+      <p><a href="{{ .ConfirmationURL }}">Confirm your xxxxxxxxxxx</a></p>
+    EOT
   })
 }
