@@ -43,8 +43,8 @@ jobs:
         uses: dopplerhq/secrets-fetch-action@v1.2.0
         with:
           doppler-token: ${{ secrets.DOPPLER_TOKEN }}
-          doppler-project: 20206205tech
-          doppler-config: infra
+          doppler-project: infra
+          doppler-config: prod
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
