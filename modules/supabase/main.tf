@@ -34,6 +34,8 @@ data "supabase_apikeys" "this" {
   project_ref = each.value.id
 }
 
+
+
 resource "supabase_settings" "this" {
   for_each = supabase_project.this
 
@@ -54,5 +56,12 @@ resource "supabase_settings" "this" {
       [local.project_configs[each.key].site_url],
       local.project_configs[each.key].allowed_uris
     )))
+
+    smtp_host        = var.SMTP_HOST
+    smtp_port        = var.SMTP_PORT
+    smtp_user        = var.SMTP_USERNAME
+    smtp_pass        = var.SMTP_PASSWORD
+    smtp_admin_email = var.SMTP_ADMIN_EMAIL
+    smtp_sender_name = var.SMTP_SENDER_NAME
   })
 }

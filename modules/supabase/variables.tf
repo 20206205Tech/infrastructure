@@ -36,3 +36,39 @@ variable "GOOGLE_CLIENT_SECRET" {
   description = "Client Secret cho Google OAuth"
   sensitive   = true
 }
+
+variable "SMTP_HOST" {
+  type        = string
+  description = "Địa chỉ máy chủ SMTP"
+  default     = "smtp.gmail.com"
+}
+
+variable "SMTP_PORT" {
+  type        = string
+  description = "Cổng SMTP"
+  default     = "587"
+}
+
+variable "SMTP_USERNAME" {
+  type        = string
+  description = "Tên đăng nhập SMTP"
+  sensitive   = true
+}
+
+variable "SMTP_PASSWORD" {
+  type        = string
+  description = "Mật khẩu SMTP"
+  sensitive   = true
+}
+
+variable "SMTP_ADMIN_EMAIL" {
+  type        = string
+  description = "Địa chỉ email người gửi (From Email)"
+  default     = "auth@20206205.tech"
+}
+
+variable "SMTP_SENDER_NAME" {
+  type        = string
+  description = "Tên hiển thị của người gửi (From Name)"
+  default     = "20206205tech Auth"
+}
