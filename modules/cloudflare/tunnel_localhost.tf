@@ -6,6 +6,7 @@ locals {
 
     "dev-code-chatbot-service"      = "http://localhost:52001"
     "dev-code-document-service"     = "http://localhost:52002"
+    "dev-code-persona-service"     = "http://localhost:52003"
 
     "dev-code-payment-service"      = "http://localhost:33001"
     "dev-code-conversation-service" = "http://localhost:33002"
