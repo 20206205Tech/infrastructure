@@ -64,6 +64,11 @@ resource "supabase_settings" "this" {
     smtp_admin_email = var.SMTP_ADMIN_EMAIL
     smtp_sender_name = var.SMTP_SENDER_NAME
 
+    # --- CẤU HÌNH RATE LIMIT ---
+    # Tăng giới hạn số lượng email được gửi mỗi giờ (Ví dụ: 1000)
+    # Mặc định của Supabase thường rất thấp (khoảng 30)
+    rate_limit_email_sent = 100
+
     # --- CẤU HÌNH ĐỊNH DẠNG EMAIL ---
     # Tiêu đề email (Subject)
     mailer_templates_confirmation_subject = "Confirm your signup"
