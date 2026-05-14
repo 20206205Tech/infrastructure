@@ -26,7 +26,7 @@ variable "projects" {
     "dev-database-data-pipeline-vbpl",
     "prod-database-data-pipeline-vbpl",
 
-    # "dev-data-pipeline-vbplnew",
+    "dev-data-pipeline-vbplnew",
     "prod-data-pipeline-vbplnew",
 
     "dev-data-pipeline-phapdien",
