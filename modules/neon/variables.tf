@@ -10,14 +10,6 @@ variable "NEON_ORGANIZATION_ID" {
   default     = "org-still-feather-82034197"
 }
 
-variable "setting_service_projects" {
-  type        = list(string)
-  description = "Danh sách project cho setting service"
-  default = [
-    "dev-setting-service",
-    "prod-setting-service"
-  ]
-}
 
 variable "projects" {
   type        = list(string)
@@ -56,4 +48,6 @@ variable "projects" {
 
   ]
 }
+
+
 
