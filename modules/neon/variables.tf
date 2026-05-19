@@ -57,3 +57,17 @@ variable "projects" {
   ]
 }
 
+
+
+
+
+variable "demo_service_projects" {
+  type        = list(string)
+  description = "Danh sách project cho demo service"
+  default = [
+    "dev-demo-service",
+    "prod-demo-service"
+  ]
+}
+# Add new authentication provider
+# https://cmtvbkvxwspkdstrcrfm.supabase.co/auth/v1/.well-known/jwks.json
