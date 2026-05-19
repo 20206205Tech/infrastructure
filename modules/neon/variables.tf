@@ -10,14 +10,6 @@ variable "NEON_ORGANIZATION_ID" {
   default     = "org-still-feather-82034197"
 }
 
-variable "setting_service_projects" {
-  type        = list(string)
-  description = "Danh sách project cho setting service"
-  default = [
-    "dev-setting-service",
-    "prod-setting-service"
-  ]
-}
 
 variable "projects" {
   type        = list(string)
@@ -59,15 +51,3 @@ variable "projects" {
 
 
 
-
-
-variable "demo_service_projects" {
-  type        = list(string)
-  description = "Danh sách project cho demo service"
-  default = [
-    "dev-demo-service",
-    "prod-demo-service"
-  ]
-}
-# Add new authentication provider
-# https://cmtvbkvxwspkdstrcrfm.supabase.co/auth/v1/.well-known/jwks.json
