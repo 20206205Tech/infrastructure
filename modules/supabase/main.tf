@@ -41,8 +41,8 @@ resource "supabase_settings" "this" {
   project_ref = each.value.id
 
   auth = jsonencode({
-    # Mặc định là 1 giờ, cấu hình 12 giờ = 43200 giây
-    jwt_exp = 43200
+    # # Mặc định là 1 giờ, cấu hình 12 giờ = 43200 giây
+    # jwt_exp = 43200
 
     external_google_enabled   = true
     external_google_client_id = var.GOOGLE_CLIENT_ID
