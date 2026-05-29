@@ -59,18 +59,18 @@ resource "aiven_kafka_topic" "prod_payment_dlq_topic" {
   replication  = 2
 }
 
-resource "aiven_kafka_topic" "dev_chat_topic" {
-  project      = aiven_project.this.project
-  service_name = aiven_kafka.kafka_srv.service_name
-  topic_name   = "dev-chat-events"
-  partitions   = 1
-  replication  = 2
-}
+# resource "aiven_kafka_topic" "dev_chat_topic" {
+#   project      = aiven_project.this.project
+#   service_name = aiven_kafka.kafka_srv.service_name
+#   topic_name   = "dev-chat-events"
+#   partitions   = 1
+#   replication  = 2
+# }
 
-resource "aiven_kafka_topic" "prod_chat_topic" {
-  project      = aiven_project.this.project
-  service_name = aiven_kafka.kafka_srv.service_name
-  topic_name   = "prod-chat-events"
-  partitions   = 1
-  replication  = 2
-}
+# resource "aiven_kafka_topic" "prod_chat_topic" {
+#   project      = aiven_project.this.project
+#   service_name = aiven_kafka.kafka_srv.service_name
+#   topic_name   = "prod-chat-events"
+#   partitions   = 1
+#   replication  = 2
+# }
