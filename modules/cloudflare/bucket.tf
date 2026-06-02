@@ -24,14 +24,22 @@ resource "cloudflare_r2_bucket" "prod_share" {
 
 
 
-resource "cloudflare_r2_bucket" "dev_voice_models" {
+
+
+
+
+resource "cloudflare_r2_bucket" "dev_persona" {
   account_id = var.CLOUDFLARE_ACCOUNT_ID
-  name       = "dev-voice-models"
+  name       = "dev-persona"
   location   = "APAC"
 }
 
-resource "cloudflare_r2_bucket" "prod_voice_models" {
+resource "cloudflare_r2_bucket" "prod_persona" {
   account_id = var.CLOUDFLARE_ACCOUNT_ID
-  name       = "prod-voice-models"
+  name       = "prod-persona"
   location   = "APAC"
 }
+
+
+
+
