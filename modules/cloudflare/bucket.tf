@@ -21,3 +21,17 @@ resource "cloudflare_r2_bucket" "prod_share" {
   name       = "prod-share"
   location   = "APAC"
 }
+
+
+
+resource "cloudflare_r2_bucket" "dev_voice_models" {
+  account_id = var.CLOUDFLARE_ACCOUNT_ID
+  name       = "dev-voice-models"
+  location   = "APAC"
+}
+
+resource "cloudflare_r2_bucket" "prod_voice_models" {
+  account_id = var.CLOUDFLARE_ACCOUNT_ID
+  name       = "prod-voice-models"
+  location   = "APAC"
+}
