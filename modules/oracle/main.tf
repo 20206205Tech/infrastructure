@@ -167,4 +167,15 @@ resource "oci_core_default_security_list" "generated_oci_core_default_security_l
     }
   }
 
+
+  # Mở Port 8880 cho dịch vụ của bạn (TCP)
+  ingress_security_rules {
+    protocol = "6" # "6" đại diện cho giao thức TCP
+    source   = "0.0.0.0/0" # Cho phép truy cập từ mọi nguồn. Bạn có thể đổi thành IP cụ thể để bảo mật hơn.
+    tcp_options {
+      max = 8880
+      min = 8880
+    }
+  }
+
 }
