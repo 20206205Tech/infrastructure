@@ -46,6 +46,10 @@ variable "projects" {
     "dev-code-persona-service",
     "prod-code-persona-service",
 
+
+    "new-code-payment-service",
+    "new-code-conversation-service",
+
   ]
 }
 
