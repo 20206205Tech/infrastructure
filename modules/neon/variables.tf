@@ -15,6 +15,12 @@ variable "projects" {
   type        = list(string)
   description = "Danh sách tên các project Neon cần tạo"
   default = [
+
+    "auto-upload-google-drive",
+
+
+
+
     "dev-database-data-pipeline-vbpl",
     "prod-database-data-pipeline-vbpl",
 
@@ -49,6 +55,7 @@ variable "projects" {
 
     "new-code-payment-service",
     "new-code-conversation-service",
+
 
   ]
 }
