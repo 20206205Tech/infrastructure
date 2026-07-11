@@ -57,6 +57,14 @@ variable "projects" {
     "new-code-conversation-service",
 
 
+    "mot-code-payment-service",
+    "mot-code-conversation-service",
+
+
+    "hai-code-payment-service",
+    "hai-code-conversation-service",
+
+
   ]
 }
 
