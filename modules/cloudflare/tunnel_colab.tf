@@ -23,11 +23,11 @@ resource "cloudflare_zero_trust_tunnel_cloudflared_config" "colab_config" {
       service  = "http://127.0.0.1:30434"
     }
     ingress_rule {
-      hostname = "api.${var.domain_name}"
+      hostname = "hdc-api.${var.domain_name}"
       service  = "http://127.0.0.1:7220"
     }
     ingress_rule {
-      hostname = "web.${var.domain_name}"
+      hostname = "hdc-web.${var.domain_name}"
       service  = "http://127.0.0.1:4321"
     }
     ingress_rule {
@@ -52,17 +52,17 @@ resource "cloudflare_record" "webhook_dns" {
   proxied = true
 }
 
-resource "cloudflare_record" "api_dns" {
+resource "cloudflare_record" "hdc_api_dns" {
   zone_id = data.cloudflare_zone.domain.id
-  name    = "api"
+  name    = "hdc-api"
   type    = "CNAME"
   content = "${cloudflare_zero_trust_tunnel_cloudflared.colab_tunnel.id}.cfargotunnel.com"
   proxied = true
 }
 
-resource "cloudflare_record" "web_dns" {
+resource "cloudflare_record" "hdc_web_dns" {
   zone_id = data.cloudflare_zone.domain.id
-  name    = "web"
+  name    = "hdc-web"
   type    = "CNAME"
   content = "${cloudflare_zero_trust_tunnel_cloudflared.colab_tunnel.id}.cfargotunnel.com"
   proxied = true
