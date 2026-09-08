@@ -23,6 +23,14 @@ resource "cloudflare_zero_trust_tunnel_cloudflared_config" "colab_config" {
       service  = "http://127.0.0.1:30434"
     }
     ingress_rule {
+      hostname = "api.${var.domain_name}"
+      service  = "http://127.0.0.1:7220"
+    }
+    ingress_rule {
+      hostname = "web.${var.domain_name}"
+      service  = "http://127.0.0.1:4321"
+    }
+    ingress_rule {
       service = "http_status:404"
     }
   }
@@ -39,6 +47,22 @@ resource "cloudflare_record" "colab_dns" {
 resource "cloudflare_record" "webhook_dns" {
   zone_id = data.cloudflare_zone.domain.id
   name    = "webhook-colab"
+  type    = "CNAME"
+  content = "${cloudflare_zero_trust_tunnel_cloudflared.colab_tunnel.id}.cfargotunnel.com"
+  proxied = true
+}
+
+resource "cloudflare_record" "api_dns" {
+  zone_id = data.cloudflare_zone.domain.id
+  name    = "api"
+  type    = "CNAME"
+  content = "${cloudflare_zero_trust_tunnel_cloudflared.colab_tunnel.id}.cfargotunnel.com"
+  proxied = true
+}
+
+resource "cloudflare_record" "web_dns" {
+  zone_id = data.cloudflare_zone.domain.id
+  name    = "web"
   type    = "CNAME"
   content = "${cloudflare_zero_trust_tunnel_cloudflared.colab_tunnel.id}.cfargotunnel.com"
   proxied = true
