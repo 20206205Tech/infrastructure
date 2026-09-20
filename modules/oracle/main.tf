@@ -188,15 +188,53 @@ resource "oci_core_default_security_list" "generated_oci_core_default_security_l
     }
   }
 
-
-
-  # Mở Port 5432 cho dịch vụ của bạn (TCP)
+# Mở Port 5432 cho PostgreSQL
   ingress_security_rules {
-    protocol = "6" # "6" đại diện cho giao thức TCP
-    source   = "0.0.0.0/0" # Cho phép truy cập từ mọi nguồn. Bạn có thể đổi thành IP cụ thể để bảo mật hơn.
+    protocol = "6" # TCP
+    source   = "0.0.0.0/0"
     tcp_options {
       max = 5432
       min = 5432
+    }
+  }
+
+  # Mở Port 6379 cho Redis
+  ingress_security_rules {
+    protocol = "6" # TCP
+    source   = "0.0.0.0/0"
+    tcp_options {
+      max = 6379
+      min = 6379
+    }
+  }
+
+  # Mở Port 27017 cho MongoDB
+  ingress_security_rules {
+    protocol = "6" # TCP
+    source   = "0.0.0.0/0"
+    tcp_options {
+      max = 27017
+      min = 27017
+    }
+  }
+
+  # Mở Port 6333 cho Qdrant (REST API)
+  ingress_security_rules {
+    protocol = "6" # TCP
+    source   = "0.0.0.0/0"
+    tcp_options {
+      max = 6333
+      min = 6333
+    }
+  }
+
+  # Mở Port 6334 cho Qdrant (gRPC)
+  ingress_security_rules {
+    protocol = "6" # TCP
+    source   = "0.0.0.0/0"
+    tcp_options {
+      max = 6334
+      min = 6334
     }
   }
 
